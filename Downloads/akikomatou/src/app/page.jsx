@@ -39,7 +39,7 @@ function MainComponent() {
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative text-center text-white">
           <img 
-            src="matou.+nuu_kanjiyoko_rectangle_1.png"
+            src="matoushiro.png"
             alt="matou logo"
             className="mb-8 h-40 md:h-56 drop-shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out"
           />
@@ -94,7 +94,7 @@ function MainComponent() {
             className="image-container absolute left-0 top-0 w-[40%] md:w-[35%]"
           >
             <img
-              src="tennai1.jpg"
+              src="hori1new.jpg"
               alt="店内の様子1"
               className="w-full aspect-[3/4] object-cover shadow-lg"
             />
@@ -104,7 +104,7 @@ function MainComponent() {
             className="image-container absolute right-0 top-[20%] md:top-[15%] w-[55%] md:w-[50%]"
           >
             <img
-              src="tennai2.jpg"
+              src="hori2.jpeg"
               alt="店内の様子2"
               className="w-full aspect-[4/3] object-cover shadow-lg"
             />
@@ -114,7 +114,7 @@ function MainComponent() {
             className="image-container absolute left-[5%] md:left-[8%] top-[45%] md:top-[50%] w-[40%] md:w-[35%]"
           >
             <img
-              src="tennai3.jpg"
+              src="hori3.jpeg"
               alt="店内の様子3"
               className="w-full aspect-[3/4] object-cover shadow-lg"
             />
@@ -129,18 +129,18 @@ function MainComponent() {
           <h2 className="text-2xl md:text-4xl text-center mb-16 tracking-widest">
             Staff
           </h2>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {[
               { src: "/st1.JPG", name: "石垣 加奈", role: "スタイリスト", comment: "シンプルに、でもどこか特別なこだわりを、、" },
               { src: "/st2.JPG", name: "天野 恵", role: "スタイリスト", comment: "日常に溶け込むお洒落hair" },
-              { src: "/akiko.JPG", name: "堀 綾希子", role: "スタイリスト", comment: "個性を引き出す！\n大人女性ショート×ハイライト" },
               { src: "/st3.JPG", name: "浦口 夏樹", role: "スタイリスト", comment: "ライフスタイルに合わせた\nカワイイをご提案" },
+              { src: "/akiko.JPG", name: "堀 綾希子", role: "代表/スタイリスト", comment: "個性を引き出す！\n大人女性ショート×ハイライト" },
             ].map((staff, idx) => (
-              <div key={idx} className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-64">
+              <div key={idx} className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md h-full">
                 <img src={staff.src} alt={staff.name} className="w-32 h-32 object-cover rounded-full mb-4" />
                 <div className="font-bold text-base md:text-xl mb-1">{staff.name}</div>
                 <div className="text-[#9B6B43] text-sm md:text-base mb-2">{staff.role}</div>
-                <p className="text-center text-gray-600 text-sm md:text-base whitespace-pre-line mb-4">{staff.comment}</p>
+                <p className="text-center text-gray-600 text-sm md:text-base whitespace-pre-line mb-4 flex-grow">{staff.comment}</p>
                 {staff.name === "天野 恵" && (
                   <div className="w-full mt-2 border-t border-[[#928e84] pt-4">
                     <div className="text-[#928e84] font-bold text-sm mb-1">【天野限定】</div>
